@@ -1,0 +1,125 @@
+.calculator {
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 0 auto;
+}
+.range {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.storage, .transfer {
+    position: relative;
+}
+
+.storage::before, .transfer::before {
+    content: '0';
+    position: absolute;
+    left: -1px;
+    top: 10px;
+}
+
+.storage::after, .transfer::after {
+    content: '1000';
+    position: absolute;
+    right: -13px;
+    top: 10px;
+}
+
+.price {
+    position: relative;
+}
+
+.price::after {
+    content: "GB";
+    position: absolute;
+    left: 30px;
+}
+.provider {
+    display: grid;
+    grid-template-columns: 100px 35px auto auto;
+    grid-template-rows: 50px;
+    align-items: center;
+    justify-content: flex-start;
+}
+.gp {
+    display: flex;
+    align-items: center;
+}
+
+input[type=radio] {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #000;
+}
+
+.option {
+    font-size: 10px;
+}
+
+.diagram {
+    display: flex;
+}
+
+.border{
+    width: 5px;
+    background: black;
+    height: 100%;
+}
+
+.graphs {
+    border: 1px green solid;
+ }
+
+.graph {
+    background-color: grey;
+    height: 20px;
+    border: 2px solid black;
+    border-left: none;
+}
+
+@media screen and (max-width: 769px) {
+    .calculator{
+        display: flex;
+        flex-direction: column-reverse;
+        height: 500px;
+        padding: 50px;
+    }
+    .range {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .diagram {
+        transform: rotate(270deg);
+        height: 100%;
+        width: auto;
+    }
+    .providers {
+        display: grid;
+    }
+
+    .provider {
+        grid-template-rows: 1fr;
+    }
+
+    .text {
+        text-align: center;
+    }
+
+    img {
+        transform: rotate(90deg)
+    }
+
+    .text {
+        transform: rotate(90deg);
+    }
+}

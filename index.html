@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator">
+        <div class="range">
+            <div>
+                <p>Storage: <span class='price' id='storageText'>100</span></p>
+                <input class='storage' id='storage' type="range" value='100' min=0 max=1000>
+            </div>
+            <div>
+                <p>Transfer: <span class='price' id='transferText'>400</span></p>
+                <input class="transfer" id='transfer' type="range" value=400 min=0 max=1000>
+            </div>
+        </div>
+        <div class="diagram">
+            <div class="providers">
+                <div class="provider">
+                    <div class="text">
+                        backblaze
+                    </div>
+                    <img src="https://res.cloudinary.com/crunchbase-production/image/upload/c_lpad,f_auto,q_auto:eco,dpr_1/v1415438786/dhedebelpzwub39suioe.png"
+                        alt="icon">
+                    <div class="border"></div>
+                    <div class="gp">
+                        <div class="graph backblaze-graph"></div>
+                        <span id='backblaze'></span>
+                    </div>
+
+                </div>
+                <div class="provider">
+                    <div class='text'>
+                        bunny
+                        <br>
+                        <input type="radio" id='hdd' name=type-disc value='hdd' checked>
+                        <label for="hdd" class='option'>HDD</label>
+                        <input type="radio" id='ssd' name=type-disc value='ssd'>
+                        <label for="ssd" class='option'>SSD</label>
+                    </div>
+                    <div>
+
+                        <img src="https://images.g2crowd.com/uploads/product/image/large_detail/large_detail_1fff394b86d3cd58b2e72b3d467cf332/bunny-net.png"
+                            alt="icon">
+                    </div>
+                    <div class="border"></div>
+                    <div class="gp">
+                        <div class="graph bunny-graph"></div>
+                        <span id='bunny'></span>
+                    </div>
+
+                </div>
+                <div class="provider">
+                    <div class='text'>
+                        scaleway
+                        <br>
+                        <input type="radio" id='multi' name='type-quantity' value='multi' checked>
+                        <label for="multi" class='option'>Multi</label>
+                        <input type="radio" id='single' name='type-quantity' value='single'>
+                        <label for="single" class='option'>Single</label>
+                    </div>
+                    <div>
+                        <img src="https://avatars.githubusercontent.com/u/5185491?s=280&v=4" alt="icon">
+                    </div>
+                    <div class="border"></div>
+                    <div class='gp'>
+                        <div class="graph scaleway-graph"></div>
+                        <span id='scaleway'></span>
+                    </div>
+
+                </div>
+                <div class="provider">
+                    <p class='text'>
+                        vultr
+                    </p>
+                    <img src="https://pcr.cloud-mercato.com/static/img/logos/vultr.png" alt="icon">
+                    <div class="border"></div>
+                    <div class="gp">
+                        <div class="graph vultr-graph"></div>
+                        <span id='vultr'></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='app.js'></script>
+</body>
+
+</html>
